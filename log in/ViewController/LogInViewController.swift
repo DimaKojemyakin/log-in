@@ -25,13 +25,14 @@ class LogInViewController: UIViewController {
     
     @IBAction func logInActio(_ sender: Any) {
         
-//        guard
-//            userNameTF.text == user.userName
-//            passwordTF.text == user.password
-//        else {
-//            showAlert
-//        }
-            
+        guard
+            userNameTF.text == user.userName,
+            passwordTF.text == user.password
+
+        else {
+            return
+        }
+        performSegue(withIdentifier: "loginSegue", sender: nil)
         
     }
 }
