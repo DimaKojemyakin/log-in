@@ -19,6 +19,8 @@
 		8132BDE92AA3C1BF00A57760 /* log_inUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132BDE82AA3C1BF00A57760 /* log_inUITests.swift */; };
 		8132BDEB2AA3C1BF00A57760 /* log_inUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132BDEA2AA3C1BF00A57760 /* log_inUITestsLaunchTests.swift */; };
 		8132BDFC2AA3D89500A57760 /* UserNameAndPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132BDFB2AA3D89500A57760 /* UserNameAndPassword.swift */; };
+		81B11F2C2AA79C5F00856B50 /* CrateAccViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B11F2B2AA79C5F00856B50 /* CrateAccViewController.swift */; };
+		81B11F302AA8D51D00856B50 /* FinalCNAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B11F2F2AA8D51D00856B50 /* FinalCNAViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		8132BDE82AA3C1BF00A57760 /* log_inUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = log_inUITests.swift; sourceTree = "<group>"; };
 		8132BDEA2AA3C1BF00A57760 /* log_inUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = log_inUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8132BDFB2AA3D89500A57760 /* UserNameAndPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameAndPassword.swift; sourceTree = "<group>"; };
+		81B11F2B2AA79C5F00856B50 /* CrateAccViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrateAccViewController.swift; sourceTree = "<group>"; };
+		81B11F2F2AA8D51D00856B50 /* FinalCNAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalCNAViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +90,10 @@
 			isa = PBXGroup;
 			children = (
 				8132BDCB2AA3C1BB00A57760 /* LogInViewController.swift */,
-				8132BDFB2AA3D89500A57760 /* UserNameAndPassword.swift */,
 				8115B5DB2AA4EE8700CFC91F /* WelcomViewController.swift */,
 				8115B5DD2AA4EEE000CFC91F /* AboutMeViewController.swift */,
+				81B11F2B2AA79C5F00856B50 /* CrateAccViewController.swift */,
+				81B11F2F2AA8D51D00856B50 /* FinalCNAViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -116,13 +121,11 @@
 		8132BDC62AA3C1BB00A57760 /* log in */ = {
 			isa = PBXGroup;
 			children = (
-				8132BDC72AA3C1BB00A57760 /* AppDelegate.swift */,
-				8132BDC92AA3C1BB00A57760 /* SceneDelegate.swift */,
+				8199F77D2AA4FC2B00504189 /* Supporting Files */,
+				8199F7802AA4FD5E00504189 /* Models */,
 				8115B5DF2AA4EEEA00CFC91F /* ViewController */,
-				8132BDCD2AA3C1BB00A57760 /* Main.storyboard */,
-				8132BDD02AA3C1BE00A57760 /* Assets.xcassets */,
-				8132BDD22AA3C1BE00A57760 /* LaunchScreen.storyboard */,
-				8132BDD52AA3C1BE00A57760 /* Info.plist */,
+				8199F77E2AA4FD3300504189 /* Storyboards */,
+				8199F77F2AA4FD5500504189 /* Resourses */,
 			);
 			path = "log in";
 			sourceTree = "<group>";
@@ -142,6 +145,41 @@
 				8132BDEA2AA3C1BF00A57760 /* log_inUITestsLaunchTests.swift */,
 			);
 			path = "log inUITests";
+			sourceTree = "<group>";
+		};
+		8199F77D2AA4FC2B00504189 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8132BDD52AA3C1BE00A57760 /* Info.plist */,
+				8132BDC72AA3C1BB00A57760 /* AppDelegate.swift */,
+				8132BDC92AA3C1BB00A57760 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8199F77E2AA4FD3300504189 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8132BDCD2AA3C1BB00A57760 /* Main.storyboard */,
+				8132BDD22AA3C1BE00A57760 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8199F77F2AA4FD5500504189 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				8132BDD02AA3C1BE00A57760 /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		8199F7802AA4FD5E00504189 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8132BDFB2AA3D89500A57760 /* UserNameAndPassword.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,8 +315,10 @@
 			files = (
 				8132BDCC2AA3C1BB00A57760 /* LogInViewController.swift in Sources */,
 				8132BDC82AA3C1BB00A57760 /* AppDelegate.swift in Sources */,
+				81B11F302AA8D51D00856B50 /* FinalCNAViewController.swift in Sources */,
 				8132BDFC2AA3D89500A57760 /* UserNameAndPassword.swift in Sources */,
 				8132BDCA2AA3C1BB00A57760 /* SceneDelegate.swift in Sources */,
+				81B11F2C2AA79C5F00856B50 /* CrateAccViewController.swift in Sources */,
 				8115B5DE2AA4EEE000CFC91F /* AboutMeViewController.swift in Sources */,
 				8115B5DC2AA4EE8700CFC91F /* WelcomViewController.swift in Sources */,
 			);
@@ -341,6 +381,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -388,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,6 +445,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -445,7 +487,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -464,7 +506,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8UJ348LDS3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "log in/Info.plist";
+				INFOPLIST_FILE = "log in/Supporting Files/Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -493,7 +536,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8UJ348LDS3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "log in/Info.plist";
+				INFOPLIST_FILE = "log in/Supporting Files/Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
