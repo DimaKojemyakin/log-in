@@ -7,42 +7,96 @@
 
 import UIKit
 
-class FinalCNAViewController: UIViewController {
+class FinalCNAViewController: UIViewController, UITextFieldDelegate {
     
-    var userNameNewACC: String = ""
-    var passwordNewACC: String = ""
+    //MARK: VAR AND LET
+    
+    var passwordSecond = ""
+    
+    var loginSecondary = ""
+    
+    //MARK: IBOutlet
     
     @IBOutlet weak var finalPasswordTF: UITextField!
+    
     @IBOutlet weak var finalNameTF: UITextField!
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
+        finalNameTF.delegate = self
         
+        finalPasswordTF.delegate = self
         
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == finalNameTF {
+            
+            print("The user clicked on the final screen next")
+            
+            finalPasswordTF.becomeFirstResponder()
+            
+        } else if textField == finalPasswordTF {
+            
+            print("The user clicked on the final done screen")
+            
+            textField.resignFirstResponder()
+            
+        }
+        
+        return true
     }
     
     
-    
     @IBAction func goTapedButtonFinalAction(_ sender: Any) {
-        print("Hello")
-        // Проверяем, что userNameNewACC и passwordNewACC не пустые
-        if !userNameNewACC.isEmpty && !passwordNewACC.isEmpty {
-            print("\(userNameNewACC) \(passwordNewACC)")
-            // Проверяем, соответствуют ли введенные значения userNameNewACC и passwordNewACC введенным значениям в текстовых полях
-            if userNameNewACC == finalNameTF.text && passwordNewACC == finalPasswordTF.text {
-                // Если условия соблюдены, выполняйте переход
-                let vc = LogInViewController()
-                navigationController?.pushViewController(vc, animated: true)
+        
+        if !passwordSecond.isEmpty && !loginSecondary.isEmpty {
+            
+            print("Passwords are not empty")
+            
+            if finalNameTF.text == loginSecondary && finalPasswordTF.text == passwordSecond {
+                
+                print("Passwords match")
+                
+                performSegue(withIdentifier: "goToLogIn", sender: nil)
+                
+                print("The user went to the main screen")
+                
+                let newPerson = Person(name: "\(loginSecondary)", surname: "\(loginSecondary)")
+                
+                let newUser = User(userName: "\(loginSecondary)", password: "\(passwordSecond)", person: newPerson)
+                
+                var users = [User.getUserDate()]
+                
+                users.append(newUser)
+                
+                print("The user is registered !")
+                
+                
             } else {
-                // Если не совпадают, показываем ошибку и не выполняем переход
-                let alertController = UIAlertController(title: "Error", message: "The username or password is incorrect", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Error", message: "You didn't enter anything", preferredStyle: .alert)
                 
-                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-                    self.navigationController?.popViewController(animated: true)
-                }))
+                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 
-                present(alertController, animated: true, completion: nil)
+                self.present(alertController, animated: true, completion: nil)
+                
+                print("Passwords or name are incorrect ")
+                
+                return
             }
+            
+        } else {
+            
+            let alertController = UIAlertController(title: "Error", message: "You didn't enter anything", preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            
+            self.present(alertController, animated: true, completion: nil)
+            
+            print("Password or Name is empty")
+            return
         }
         
     }

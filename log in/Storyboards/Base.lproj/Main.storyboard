@@ -119,12 +119,12 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dAD-tY-VwB">
                                 <rect key="frame" x="16" y="221.66666666666666" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l1F-nz-fCJ">
                                 <rect key="frame" x="16" y="286.66666666666669" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your login, Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOR-Ih-Wmd">
                                 <rect key="frame" x="16" y="192.66666666666666" width="185" height="21"/>
@@ -211,12 +211,12 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LJT-Zt-ZzB">
                                 <rect key="frame" x="16" y="218.33333333333334" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jRL-dT-iJ9">
                                 <rect key="frame" x="16" y="281.33333333333331" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsm-Hj-SjJ">
                                 <rect key="frame" x="16" y="259.33333333333331" width="168" height="21"/>
@@ -312,42 +312,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJk-HW-uD0">
-                                <rect key="frame" x="55" y="170" width="140.33333333333334" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJk-HW-uD0">
+                                <rect key="frame" x="145" y="440" width="140.33333333333334" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyd-N0-u5f">
-                                <rect key="frame" x="94" y="478" width="227" height="126"/>
+                                <rect key="frame" x="102" y="554" width="227" height="126"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="227" id="MZy-cb-6c1"/>
-                                    <constraint firstAttribute="height" constant="126" id="ocB-Pr-7xx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="227" id="NWp-IV-7ad"/>
+                                    <constraint firstAttribute="height" constant="126" id="tmn-wk-DKJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log out">
                                     <color key="titleColor" systemColor="tableBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="4sO-5A-oJP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cij-iK-o9L"/>
                         <color key="backgroundColor" red="0.46741564987485495" green="0.28125348389935045" blue="0.53836488723754883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.031778452229999997" green="0.045518116050000001" blue="0.86078912019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="cij-iK-o9L" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QJk-HW-uD0" secondAttribute="trailing" id="3vE-z6-AJO"/>
-                            <constraint firstItem="cij-iK-o9L" firstAttribute="trailing" secondItem="Qyd-N0-u5f" secondAttribute="trailing" constant="109" id="UFd-OU-5qa"/>
-                            <constraint firstItem="QJk-HW-uD0" firstAttribute="top" secondItem="cij-iK-o9L" secondAttribute="top" constant="170" id="UeV-aa-EMa"/>
-                            <constraint firstItem="Qyd-N0-u5f" firstAttribute="leading" secondItem="cij-iK-o9L" secondAttribute="leading" constant="94" id="egW-Q5-fez"/>
-                            <constraint firstItem="Qyd-N0-u5f" firstAttribute="top" secondItem="QJk-HW-uD0" secondAttribute="bottom" constant="266" id="mKy-6h-o81"/>
+                            <constraint firstItem="QJk-HW-uD0" firstAttribute="centerY" secondItem="Q9F-wE-HMY" secondAttribute="centerY" id="1oM-OG-mKt"/>
+                            <constraint firstItem="QJk-HW-uD0" firstAttribute="centerX" secondItem="Q9F-wE-HMY" secondAttribute="centerX" id="EFx-YO-HgF"/>
+                            <constraint firstItem="Qyd-N0-u5f" firstAttribute="top" secondItem="QJk-HW-uD0" secondAttribute="bottom" constant="72" id="O23-FZ-seY"/>
+                            <constraint firstItem="Qyd-N0-u5f" firstAttribute="leading" secondItem="cij-iK-o9L" secondAttribute="leading" constant="102" id="hq6-XS-XDw"/>
+                            <constraint firstItem="cij-iK-o9L" firstAttribute="trailing" secondItem="Qyd-N0-u5f" secondAttribute="trailing" constant="101" id="lln-A5-tR2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="person.crop.circle" catalog="system" id="4fP-zm-dgx"/>
                     <navigationItem key="navigationItem" id="KmH-db-4Ui"/>
-                    <connections>
-                        <segue destination="pK4-ob-jYF" kind="show" identifier="logOutSegue" id="QBu-vI-zLC"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A56-iM-J9X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -397,7 +397,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="kG9-CD-mqe"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="k95-5e-ckF">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

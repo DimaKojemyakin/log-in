@@ -7,7 +7,11 @@
 
 import UIKit
 
-class CrateAccViewController: UIViewController {
+class CrateAccViewController: UIViewController, UITextFieldDelegate{
+    
+    //MARK: IBOutlets
+    @IBOutlet var passwordSecond: UILabel!
+    @IBOutlet var loginSecondary: UILabel!
     
     @IBOutlet weak var passwordNewTF: UITextField!
     
@@ -19,39 +23,50 @@ class CrateAccViewController: UIViewController {
     
     var enteredNewPassword: String?
     
+    //MARK: ViewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        passwordNewTF.delegate = self
+        
+        nameNewTF.delegate = self
         
         buttunGo.layer.cornerRadius = 13
         
     }
     
+    //MARK: textFilsShouldReturn
     
-    
-    @IBAction func logInActio(_ sender: Any) {
-        enteredNewUserName = nameNewTF.text
-        enteredNewPassword = passwordNewTF.text
-        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "YourSegueIdentifier" {
-            if let finalCNAViewController = segue.destination as? FinalCNAViewController {
-                // Устанавливаем значения userNameNewACC и passwordNewACC
-                finalCNAViewController.userNameNewACC = nameNewTF.text ?? ""
-                finalCNAViewController.passwordNewACC = passwordNewTF.text ?? ""
-            }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == nameNewTF {
+            
+            print("The user clicked on the final screen next")
+            
+            passwordNewTF.becomeFirstResponder()
+            
+        } else if textField == passwordNewTF {
+            
+            print("The user clicked on the final done screen")
+            
+            textField.resignFirstResponder()
+            
         }
+        return true
     }
+    
+    //MARK: GO Button
     
     @IBAction func buttunTapedNewAccGo(_ sender: Any) {
         
-        
         guard
+            
             let name = nameNewTF.text, !name.isEmpty,
             
-                let password = passwordNewTF.text, !password.isEmpty
+            let password = passwordNewTF.text, !password.isEmpty
+                
         else {
+            
             print("Password or Name is empty")
             
             let alertController = UIAlertController(title: "Error", message: "You didn't enter anything", preferredStyle: .alert)
@@ -63,11 +78,32 @@ class CrateAccViewController: UIViewController {
             return
         }
         print("Name or Password isn't empty")
+        
         performSegue(withIdentifier: "seguaNewAccGo", sender: nil)
         
-        
+        return
         
     }
+    
+    //MARK: Data transmission
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard segue.identifier == "seguaNewAccGo" else { return }
+        
+        guard let destination = segue.destination as? FinalCNAViewController else { return }
+        
+        destination.passwordSecond = passwordNewTF.text ?? ""
+        
+        destination.loginSecondary = nameNewTF.text ?? ""
+        
+        print("We have passed the passwords")
+        
+    }
+    
+    
+    
+    
     
     
     
